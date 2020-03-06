@@ -39,6 +39,9 @@ public class JwtUtils {
         return Jwts.parser().setSigningKey(key).parseClaimsJws(token);
     }
 
+    private static Jws<Claims> aaa(String token, PublicKey key) {
+        return Jwts.parser().setSigningKey(key).parseClaimsJws(token);
+    }
     /**
      * 获取token中的用户信息
      *
